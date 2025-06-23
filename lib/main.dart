@@ -20,9 +20,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: AppTheme.darkTheme,
-      home: const Scaffold(
+      home: Scaffold(
         body: Center(
-          child: Text('WORI - a chat app'),
+          child: Text(
+            'WORI - a chat app',
+            style: Theme.of(
+              context,
+            ).textTheme.titleLarge?.copyWith(color: Colors.white),
+          ),
         ),
       ),
     );
