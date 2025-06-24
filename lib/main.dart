@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wori_app_frontend/core/theme.dart';
 import 'package:wori_app_frontend/features/messages/presentation/pages/messages_page.dart';
-import 'package:wori_app_frontend/pages/home.dart';
 
 class MyCustomScrollBehavior extends MaterialScrollBehavior {
   // Override behavior methods and getters like dragDevices
