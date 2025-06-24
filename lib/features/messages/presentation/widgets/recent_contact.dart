@@ -20,7 +20,7 @@ class RecentContact extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 30,
-            backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+            backgroundImage: NetworkImage("https://picsum.photos/1280/720"),
           ),
           Gap(5),
           Text(

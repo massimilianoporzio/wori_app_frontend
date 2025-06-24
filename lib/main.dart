@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       themeMode: ThemeMode.light,
       theme: AppTheme.darkTheme,
-      home: ChatPage(),
+      home: MessagesPage(),
     );
   }
 }

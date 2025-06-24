@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/utils/gravatars.dart';
 
 class MessageTile extends StatelessWidget {
   final String name;
@@ -22,7 +23,9 @@ class MessageTile extends StatelessWidget {
       ),
       leading: CircleAvatar(
         radius: 30,
-        backgroundImage: NetworkImage('https://via.placeholder.com/150'),
+        backgroundImage: NetworkImage(
+          "https://picsum.photos/1280/720",
+        ),
       ),
       title: Text(
         name,
