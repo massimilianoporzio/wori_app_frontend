@@ -4,6 +4,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/features/chat/presentation/pages/chat_page.dart';
 import 'package:wori_app_frontend/features/messages/presentation/pages/messages_page.dart';
 
 class MyCustomScrollBehavior extends MaterialScrollBehavior {
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       themeMode: ThemeMode.light,
       theme: AppTheme.darkTheme,
-      home: MessagesPage(),
+      home: ChatPage(),
     );
   }
 }
