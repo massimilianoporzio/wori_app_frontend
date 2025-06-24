@@ -21,32 +21,32 @@ class DeafultColor {
 }
 
 class AppTheme {
-  static ThemeData get darkTheme {
-    return ThemeData(
-      primaryColor: Colors.white,
-      scaffoldBackgroundColor: DeafultColor.messageListPage,
-      textTheme: TextTheme(
-        titleMedium: GoogleFonts.alegreyaSans(
-          fontSize: FontSizes.medium,
-          color: DeafultColor.wihteText,
-        ),
-        titleLarge: GoogleFonts.alegreyaSans(
-          fontSize: FontSizes.large,
-          color: DeafultColor.wihteText,
-        ),
-        bodySmall: GoogleFonts.alegreyaSans(
-          fontSize: FontSizes.small,
-          color: DeafultColor.greyText,
-        ),
-        bodyMedium: GoogleFonts.alegreyaSans(
-          fontSize: FontSizes.standard,
-          color: DeafultColor.wihteText,
-        ),
-        bodyLarge: GoogleFonts.alegreyaSans(
-          fontSize: FontSizes.medium,
-          color: DeafultColor.wihteText,
-        ),
+  static ThemeData darkTheme = ThemeData(
+    useMaterial3: true,
+    primaryColor: Colors.white,
+    fontFamily: GoogleFonts.alegreyaSans().fontFamily,
+    scaffoldBackgroundColor: DeafultColor.messageListPage,
+    textTheme: TextTheme(
+      titleMedium: GoogleFonts.alegreyaSans(
+        fontSize: FontSizes.medium,
+        color: DeafultColor.wihteText,
       ),
-    );
-  }
+      titleLarge: GoogleFonts.alegreyaSans(
+        fontSize: FontSizes.large,
+        color: DeafultColor.wihteText,
+      ),
+      bodySmall: GoogleFonts.alegreyaSans(
+        fontSize: FontSizes.small,
+        color: DeafultColor.greyText,
+      ),
+      bodyMedium: GoogleFonts.alegreyaSans(
+        fontSize: FontSizes.standard,
+        color: DeafultColor.wihteText,
+      ),
+      bodyLarge: GoogleFonts.alegreyaSans(
+        fontSize: FontSizes.medium,
+        color: DeafultColor.wihteText,
+      ),
+    ),
+  );
 }

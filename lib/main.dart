@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/pages/home.dart';
 
 void main() {
   LicenseRegistry.addLicense(() async* {
@@ -19,17 +20,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      themeMode: ThemeMode.light,
       theme: AppTheme.darkTheme,
-      home: Scaffold(
-        body: Center(
-          child: Text(
-            'WORI - a chat app',
-            style: Theme.of(
-              context,
-            ).textTheme.titleLarge?.copyWith(color: Colors.white),
-          ),
-        ),
-      ),
+      home: Home(),
     );
   }
 }
