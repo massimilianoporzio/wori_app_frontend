@@ -10,7 +10,7 @@ class FontSizes {
   static const double xLarge = 32.0;
 }
 
-class DeafultColor {
+class DefaultColors {
   static const Color myGrey = Colors.grey;
   static const Color greyText = Color(0xFFB3B9C9);
   static const Color wihteText = Color(0xFFFFFFFF);
@@ -20,6 +20,7 @@ class DeafultColor {
   static const Color messageListPage = Color(0xFF292F3F);
   static const Color buttonColor = Color(0xFF7A8194);
   static const Color backgroundColor = Color(0xFF182020);
+  static const Color linkColor = Color(0xFFb423d7);
 }
 
 class AppTheme {
@@ -27,27 +28,27 @@ class AppTheme {
     useMaterial3: true,
     primaryColor: Colors.white,
     fontFamily: GoogleFonts.alegreyaSans().fontFamily,
-    scaffoldBackgroundColor: DeafultColor.backgroundColor,
+    scaffoldBackgroundColor: DefaultColors.backgroundColor,
     textTheme: TextTheme(
       titleMedium: GoogleFonts.alegreyaSans(
         fontSize: FontSizes.medium,
-        color: DeafultColor.wihteText,
+        color: DefaultColors.wihteText,
       ),
       titleLarge: GoogleFonts.alegreyaSans(
         fontSize: FontSizes.large,
-        color: DeafultColor.wihteText,
+        color: DefaultColors.wihteText,
       ),
       bodySmall: GoogleFonts.alegreyaSans(
         fontSize: FontSizes.small,
-        color: DeafultColor.greyText,
+        color: DefaultColors.greyText,
       ),
       bodyMedium: GoogleFonts.alegreyaSans(
         fontSize: FontSizes.standard,
-        color: DeafultColor.wihteText,
+        color: DefaultColors.wihteText,
       ),
       bodyLarge: GoogleFonts.alegreyaSans(
         fontSize: FontSizes.medium,
-        color: DeafultColor.wihteText,
+        color: DefaultColors.wihteText,
       ),
     ),
   );

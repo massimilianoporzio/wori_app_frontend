@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/conf/theme/theme.dart';
 import 'package:wori_app_frontend/features/chat/domain/entities/message.dart';
 
 class MessageWidget extends StatelessWidget {
@@ -22,8 +22,8 @@ class MessageWidget extends StatelessWidget {
         padding: const EdgeInsets.all(15),
         decoration: BoxDecoration(
           color: type == MessageType.received
-              ? DeafultColor.receiverMessage
-              : DeafultColor.senderMessage,
+              ? DefaultColors.receiverMessage
+              : DefaultColors.senderMessage,
           borderRadius: BorderRadius.circular(15),
         ),
         child: Text(message, style: Theme.of(context).textTheme.bodyMedium),

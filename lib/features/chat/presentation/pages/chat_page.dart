@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:wori_app_frontend/core/extensions.dart';
-import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/conf/theme/theme.dart';
 import 'package:wori_app_frontend/features/chat/domain/entities/message.dart';
 import 'package:wori_app_frontend/features/chat/presentation/widgets/message_input.dart';
 import 'package:wori_app_frontend/features/chat/presentation/widgets/message_widget.dart';
@@ -19,7 +19,7 @@ class ChatPage extends StatelessWidget {
         actions: [
           IconButton(
             icon: const Icon(Icons.search),
-            color: DeafultColor.wihteText,
+            color: DefaultColors.wihteText,
             onPressed: () {
               // Implement search functionality
             },

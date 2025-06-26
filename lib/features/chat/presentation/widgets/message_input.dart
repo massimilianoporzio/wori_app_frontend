@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/conf/theme/theme.dart';
 
 class MessageInput extends StatelessWidget {
   const MessageInput({super.key});
@@ -9,7 +9,7 @@ class MessageInput extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: DeafultColor.sentMessageInput,
+        color: DefaultColors.sentMessageInput,
         borderRadius: BorderRadius.circular(25),
       ),
       margin: const EdgeInsets.all(25),

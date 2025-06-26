@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:wori_app_frontend/core/extensions.dart';
-import 'package:wori_app_frontend/core/theme.dart';
+import 'package:wori_app_frontend/conf/theme/theme.dart';
 import 'package:wori_app_frontend/features/messages/presentation/widgets/message_tile.dart';
 import 'package:wori_app_frontend/features/messages/presentation/widgets/recent_contact.dart';
 
@@ -82,7 +82,7 @@ class MessagesPage extends StatelessWidget {
                   child: Container(
                     margin: const EdgeInsets.only(bottom: 10),
                     decoration: BoxDecoration(
-                      color: DeafultColor.messageListPage,
+                      color: DefaultColors.messageListPage,
                       borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(30),
                         topRight: Radius.circular(30),
