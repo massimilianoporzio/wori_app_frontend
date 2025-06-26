@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_password_strength/flutter_password_strength.dart';
 import 'package:gap/gap.dart';
 import 'package:wori_app_frontend/features/auth/presentation/widgets/auth_button.dart';
 import 'package:wori_app_frontend/features/auth/presentation/widgets/auth_prompt.dart';
@@ -12,6 +13,7 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final _formKey = GlobalKey<FormState>();
   @override
   void dispose() {
     _emailController.dispose();
@@ -47,18 +49,21 @@ class _RegisterPageState extends State<RegisterPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
-                Column(
-                  children: [
-                    Text(
-                      "Sign Up",
-                      style: TextStyle(
-                        fontSize: 44,
-                        fontWeight: FontWeight.bold,
+                Form(
+                  key: _formKey,
+                  child: Column(
+                    children: [
+                      Text(
+                        "Sign Up",
+                        style: TextStyle(
+                          fontSize: 44,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
-                    ),
-                    Gap(40),
-                    Text("Create your account"),
-                  ],
+                      Gap(40),
+                      Text("Create your account"),
+                    ],
+                  ),
                 ),
                 Gap(5),
 
@@ -80,6 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   isPassword: true,
                   hintText: 'Password',
                 ),
+
                 Gap(20),
                 AuthButton(
                   text: "Register",
