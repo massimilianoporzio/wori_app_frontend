@@ -30,6 +30,7 @@ class AuthPrompt extends StatelessWidget {
                 style: const TextStyle(
                   color: DefaultColors.linkColor,
                   fontWeight: FontWeight.bold,
+                  decoration: TextDecoration.underline,
                 ),
               ),
             ],

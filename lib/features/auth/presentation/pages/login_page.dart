@@ -4,34 +4,32 @@ import 'package:wori_app_frontend/features/auth/presentation/widgets/auth_button
 import 'package:wori_app_frontend/features/auth/presentation/widgets/auth_prompt.dart';
 import 'package:wori_app_frontend/features/auth/presentation/widgets/text_input.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+class LoginPage extends StatefulWidget {
+  const LoginPage({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _LoginPageState extends State<LoginPage> {
   @override
   void dispose() {
     _emailController.dispose();
     _passwordController.dispose();
-    _usernameController.dispose();
+
     super.dispose();
   }
 
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
-  final TextEditingController _usernameController = TextEditingController();
 
   void _showInputValues() {
     final email = _emailController.text;
     final password = _passwordController.text;
-    final username = _usernameController.text;
 
     // You can handle the input values here, e.g., send them to a server
     print(
-      'Email: $email, Password: $password, Username: $username',
+      'Email: $email, Password: $password',
     );
   }
 
@@ -50,24 +48,16 @@ class _RegisterPageState extends State<RegisterPage> {
                 Column(
                   children: [
                     Text(
-                      "Sign Up",
+                      "Welcome Back!",
                       style: TextStyle(
                         fontSize: 44,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    Gap(40),
-                    Text("Create your account"),
+                    Text("Enter your credentials to continue"),
                   ],
                 ),
-                Gap(5),
-
-                TextInput(
-                  controller: _usernameController,
-                  icon: Icons.person,
-                  hintText: 'Username',
-                ),
-                Gap(20),
+                Gap(40),
                 TextInput(
                   controller: _emailController,
                   icon: Icons.email,
@@ -82,7 +72,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Gap(20),
                 AuthButton(
-                  text: "Register",
+                  text: "Login",
                   onPressed: () {
                     //Handle registration logic here
                     _showInputValues();
@@ -90,8 +80,8 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 Gap(10),
                 AuthPrompt(
-                  text: "Already have an account?",
-                  linkText: "Click here to login",
+                  text: "Does not have an account yet?",
+                  linkText: "Click here to register",
                 ),
               ],
             ),
