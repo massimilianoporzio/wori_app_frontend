@@ -5,25 +5,29 @@ import 'package:wori_app_frontend/core/usecases/usecase.dart';
 import 'package:wori_app_frontend/features/auth/domain/entities/user_entity.dart';
 import 'package:wori_app_frontend/features/auth/domain/repositories/auth_repository.dart';
 
-class LoginUser implements UseCase<User, LoginParams> {
+class RegisterUser implements UseCase<User, RegisterParams> {
   final AuthRepository repository;
 
-  LoginUser(this.repository);
+  RegisterUser(this.repository);
 
   @override
-  Future<Either<Failure, User>> call(LoginParams params) async {
-    return await repository.login(params.email, params.password);
+  Future<Either<Failure, User>> call(RegisterParams params) async {
+    return await repository.register(
+      params.email,
+      params.username,
+      params.password,
+    );
   }
 }
 
-class LoginParams extends Equatable {
+class RegisterParams extends Equatable {
   final String email;
-
+  final String username;
   final String password;
 
-  const LoginParams({
+  const RegisterParams({
     required this.email,
-
+    required this.username,
     required this.password,
   });
 
